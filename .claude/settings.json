@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(cp icon-trimmed2.png \"/e/Logiciel/Visual Studio Code/Sénéouest 2/img/logo-icon.png\")",
+      "Bash(cp favicon-square.png \"/e/Logiciel/Visual Studio Code/Sénéouest 2/img/favicon.png\")",
+      "Bash(pkill -f \"serve -l 8090\")",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //F //PID 16452)"
+    ]
+  }
+}
