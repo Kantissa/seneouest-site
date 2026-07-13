@@ -478,6 +478,14 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 .about-text p { color: var(--gray); margin-bottom: 16px; }
 .about-text .btn { margin-top: 12px; }
 
+@media (max-width: 599px) {
+  body[data-page="qui-sommes-nous"] .about-text {
+    background: linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.88)), url('../img/Séné-Ouest SARL image arrière plan.jpg') center/cover no-repeat;
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+}
+
 .maison-title {
   font-size: clamp(2.3rem, 5vw, 3.8rem);
   margin-bottom: 18px;
