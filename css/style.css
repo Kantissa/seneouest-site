@@ -701,6 +701,10 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 .location-item p, .location-item a { color: var(--gray); font-size: .92rem; }
 .location-item a:hover { color: var(--blue); }
 
+@media (max-width: 599px) {
+  .location-card .location-item { display: none; }
+}
+
 /* ==========================================================================
    Footer + Contact form
    ========================================================================== */
