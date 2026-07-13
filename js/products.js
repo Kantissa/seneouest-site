@@ -42,6 +42,26 @@
       { image: "img/products/foot-500ml-2.png", nom: "Détergent Multi-Usage", desc: "500 ML / QTÉ Boite : 12" },
       { image: "img/products/foot-225ml-1.png", nom: "Détergent Multi-Usage", desc: "225 ML / QTÉ Boite : 24" },
       { image: "img/products/foot-20L-1.png", nom: "Détergent Multi-Usage", desc: "20 L" },
+      { image: "img/FOOT/eau de javel foot.png", nom: "Eau de Javel", desc: "1 L" },
+    ],
+    "foot-barre": [
+      { image: "img/FOOT/savon  morceaux 1.png", nom: "Savon en morceaux", desc: "275 G / QTÉ Boite : 18" },
+      { image: "img/FOOT/savon  morceaux 2.png", nom: "Savon en morceaux", desc: "225 G / QTÉ Boite : 18" },
+      { image: "img/FOOT/savon  morceaux 3.png", nom: "Savon en morceaux", desc: "300 G / QTÉ Boite : 18" },
+      { image: "img/FOOT/savon  morceaux 4.png", nom: "Savon en morceaux", desc: "400 G / QTÉ Boite : 18" },
+      { image: "img/FOOT/savon  morceaux 5.png", nom: "Savon en morceaux", desc: "2 KG" },
+      { image: "img/FOOT/savon  morceaux 6.png", nom: "Savon en morceaux", desc: "300 G / QTÉ Boite : 12x4" },
+      { image: "img/FOOT/savon  morceaux 7.png", nom: "Savon en morceaux", desc: "200 G / QTÉ Boite : 18" },
+      { image: "img/FOOT/savon  morceaux 8.png", nom: "Savon en morceaux", desc: "125 G / QTÉ Boite : 36" },
+      { image: "img/FOOT/savon  morceaux 9.png", nom: "Savon en morceaux", desc: "400 G / QTÉ Boite : 18" },
+      { image: "img/FOOT/savon  morceaux 10.png", nom: "Savon en morceaux", desc: "125 G / QTÉ Boite : 36" },
+    ],
+    "foot-poudre": [
+      { image: "img/FOOT/Détergent Poudre Foot 30g.png", nom: "Détergent Multi-Usage", desc: "30 G / QTÉ Boite : 90" },
+      { image: "img/FOOT/Détergent Poudre Foot 60g.png", nom: "Détergent Multi-Usage", desc: "60 G / QTÉ Boite : 80" },
+      { image: "img/FOOT/Détergent Poudre Foot 400g.png", nom: "Détergent Multi-Usage", desc: "400 G / QTÉ Boite : 20" },
+      { image: "img/FOOT/Détergent Poudre Foot 850g.png", nom: "Détergent Multi-Usage", desc: "850 G / QTÉ Boite : 10" },
+      { image: "img/FOOT/Détergent Poudre Foot 10 kg.png", nom: "Détergent Multi-Usage", desc: "10 KG" },
     ],
     baobab: [
       { type: "poudre", nom: "BAOBAB Nature Poudre", desc: "Détergent en poudre à base d'extraits naturels, doux et efficace." },
@@ -73,7 +93,9 @@
     return (
       '<article class="product-card reveal reveal-delay-' + delay + '">' +
       '<div class="product-media">' +
+      '<div class="product-media-inner">' +
       media +
+      "</div>" +
       "</div>" +
       '<div class="product-body">' +
       "<h3>" + item.nom + "</h3>" +
@@ -84,11 +106,13 @@
   }
 
   function renderGrid() {
-    var grid = document.querySelector("[data-products-grid]");
-    if (!grid) return;
-    var brand = grid.getAttribute("data-products-grid");
-    var items = PRODUITS[brand] || [];
-    grid.innerHTML = items.map(renderCard).join("");
+    var grids = document.querySelectorAll("[data-products-grid]");
+    if (!grids.length) return;
+    grids.forEach(function (grid) {
+      var brand = grid.getAttribute("data-products-grid");
+      var items = PRODUITS[brand] || [];
+      grid.innerHTML = items.map(renderCard).join("");
+    });
     if (window.dispatchEvent) {
       document.dispatchEvent(new CustomEvent("products:rendered"));
     }
@@ -105,9 +129,13 @@
         },
         { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
       );
-      grid.querySelectorAll(".reveal").forEach(function (el) { observer.observe(el); });
+      grids.forEach(function (grid) {
+        grid.querySelectorAll(".reveal").forEach(function (el) { observer.observe(el); });
+      });
     } else {
-      grid.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-visible"); });
+      grids.forEach(function (grid) {
+        grid.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-visible"); });
+      });
     }
   }
 
