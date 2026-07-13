@@ -661,6 +661,10 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 .product-card:hover .product-media img.product-photo { transform: scale(1.06); }
 .product-media-inner:has(img[src*="4 savon ngalam.png"]) { padding: 0; }
 
+@media (max-width: 599px) {
+  .product-media-inner:has(img[src*="Détergent Multi-Usage Baobab.png"]) { padding: 4px; }
+}
+
 .product-tag {
   position: absolute;
   top: 12px;
