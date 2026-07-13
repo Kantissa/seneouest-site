@@ -76,14 +76,10 @@
       { image: "img/BAOBAB/4 Savon Multi-Usage Baobab.png", nom: "Savon Multi-Usage", desc: "300 G / QTÉ Boite : 18" },
     ],
     ngalam: [
-      { type: "barre", nom: "NGALAM Savon Force", desc: "Savon ménage en morceau grand format, très concentré." },
-      { type: "poudre", nom: "NGALAM Poudre Éclat", desc: "Détergent poudre blancheur, tache et odeur neutralisées." },
-      { type: "liquide", nom: "NGALAM Liquide 1L", desc: "Savon liquide multi-surfaces, parfum signature NGALAM." },
-      { type: "barre", nom: "NGALAM Savon Duo", desc: "Lot de deux savons ménage, formule économique." },
-      { type: "poudre", nom: "NGALAM Poudre 1kg", desc: "Détergent en poudre grand format pour un usage prolongé." },
-      { type: "liquide", nom: "NGALAM Liquide 500ml", desc: "Format compact du savon liquide NGALAM, usage quotidien." },
-      { type: "barre", nom: "NGALAM Savon Classic", desc: "Le savon ménage traditionnel NGALAM, efficace et abordable." },
-      { type: "poudre", nom: "NGALAM Poudre Fraîcheur", desc: "Détergent poudre parfumé, mousse riche, rinçage rapide." },
+      { image: "img/NGALAM/1 savon ngalam.png", nom: "Savon Naturel - extra Moussant", desc: "200 G / QTÉ Boite : 18" },
+      { image: "img/NGALAM/2 savon ngalam.png", nom: "Savon Naturel - extra Moussant", desc: "1 KG / QTÉ Boite : 10" },
+      { image: "img/NGALAM/3 savon ngalam.png", nom: "Savon Naturel - extra Moussant", desc: "250 GR / QTÉ Boite : 18" },
+      { image: "img/NGALAM/4 savon ngalam.png", nom: "Savon Naturel - extra Moussant", desc: "400 G / QTÉ Boite : 10" },
     ],
   };
 
