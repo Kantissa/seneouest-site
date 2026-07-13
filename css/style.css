@@ -384,9 +384,9 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 }
 .hero-content .eyebrow { color: #9fe89b; }
 .hero-title {
-  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-size: clamp(2.6rem, 7.5vw, 5.2rem);
   color: var(--white);
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto 20px;
 }
 .hero-title .hl { color: #9fe89b; }
