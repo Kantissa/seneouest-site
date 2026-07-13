@@ -642,6 +642,7 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 .product-card:hover .product-media svg { transform: scale(1.08) rotate(-3deg); }
 .product-media img.product-photo { width: 100%; height: 100%; object-fit: contain; transition: transform .4s var(--ease); }
 .product-card:hover .product-media img.product-photo { transform: scale(1.06); }
+.product-media-inner:has(img[src*="4 savon ngalam.png"]) { padding: 0; }
 
 .product-tag {
   position: absolute;
