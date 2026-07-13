@@ -453,6 +453,7 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 .about-photo svg { width: 100%; height: 100%; }
 .about-photo img.brand-logo-photo { width: 100%; height: 100%; object-fit: contain; padding: 48px; box-sizing: border-box; }
 .about-photo img.about-photo-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.about-photo img.about-photo-img--contain { object-fit: contain; background: var(--white); }
 .about-photo::after {
   content: '';
   position: absolute;
