@@ -484,6 +484,9 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
     border-radius: var(--radius);
     padding: 24px;
   }
+  body[data-page="qui-sommes-nous"] .about-text p {
+    font-weight: 700;
+  }
 }
 
 .maison-title {
