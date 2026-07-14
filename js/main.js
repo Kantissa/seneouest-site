@@ -34,6 +34,7 @@
     initActiveLink();
     initContactForms();
     initReveal();
+    initScrollTop();
     document.dispatchEvent(new CustomEvent("partials:ready"));
   });
 
@@ -196,6 +197,25 @@
           feedback.classList.remove("is-visible");
         }, 6000);
       }
+    });
+  }
+
+  /* ---------------------------------------------------------------------
+   * 7. Bouton "Retour en haut" (mobile)
+   * ------------------------------------------------------------------- */
+  function initScrollTop() {
+    var btn = document.querySelector(".scroll-top");
+    if (!btn) return;
+
+    function toggleVisibility() {
+      btn.classList.toggle("is-visible", window.scrollY > 400);
+    }
+
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 })();

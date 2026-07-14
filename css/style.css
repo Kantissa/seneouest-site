@@ -804,6 +804,35 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   .whatsapp-float svg { width: 26px; height: 26px; }
 }
 
+/* Bouton flottant "Retour en haut" (mobile uniquement) */
+.scroll-top {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #ffffff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(29, 111, 184, .4);
+  z-index: 950;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity .25s var(--ease), transform .25s var(--ease);
+}
+.scroll-top svg { width: 22px; height: 22px; }
+.scroll-top.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+@media (max-width: 899px) {
+  .scroll-top { display: flex; }
+}
+
 .footer-form-card {
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.12);
